@@ -1,8 +1,8 @@
 const Repo = require('../classes/Repo');
 const repo = new Repo();
-const data = { postId: 3, id: 3, name: 'Bob Your Uncle' };
 
 describe('Repo: fetchRand', () => {
+  const data = { postId: 3, id: 3, name: 'Bob Your Uncle' };
   beforeEach(() => {
     getSpy = jest.spyOn(repo.api, 'getPage').mockImplementation(() => {
       Promise.resolve(data);
